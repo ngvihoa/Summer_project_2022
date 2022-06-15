@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Vietnamese - Bahnaric Neural Machine Translator</title>
+</head>
+<style>
+    .myDiv {
+        border: 5px outset rgb(255, 8, 0);
+        background-color: lightblue;
+        text-align: center;
+    }
+</style>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <img id="logo-title" src="images/logo.png">
+                <div id="title" class="header-title">
+                    <h1>
+                        Vietnamese - Bahnaric <br>
+                        Neural Machine Translator
+                    </h1>
+                </div>
+            </a>
+        </nav>
+        <!-- Tab links-->
+        <div class = 'tab' >
+            <button class = 'tablinks' onclick="openCity(event, 'Bahnaric')">Bahnaric</button>
+            <button class = 'tablinks' onclick="openCity(event, 'Model')">Model</button>
+            <button class = 'tablinks' onclick="openCity(event, 'Data augmentation')">Data augmentation</button>
+            <button class = 'tablinks' onclick="openCity(event, 'Processing')">Processing</button>
+            <button class = 'tablinks' onclick="openCity(event, 'References')">References</button>
+        </div>
+        <!-- Tab contents-->
+        <div id="Bahnaric" class='tabcontent'>
+            <div class = "translation-table">
+                <h1>Dân số Bahnar</h1>
+                <p>Bahnar là một trong 54 dân tộc sống trong lãnh thổ Việt Nam. Theo số liệu thống kê từ Kết quả toàn bộ của Tổng điều tra
+                dân số và nhà ở năm 2019 [Vie20], dân số Bahnar khoảng 286910 người, tập trung chủ yếu ở khu vực Tây Nguyên (Gia Lai,
+                Kon Tum) và Duyên hải miền trung (Bình Định, Phú Yên), trong đó: tại Bình Định là 21650 người (1.45% dân số tỉnh), tại
+                Phú Yên là 4680 người (0.53% dân số tỉnh), tại Kon Tum là 68799 người (12.73% dân số tỉnh), và Gia Lai là 189367 người
+                (12.51% dân số tỉnh).</p>
+                <h1>Hệ thống chữ viết Bahnar</h1>
+                <p>Ngôn ngữ Bahnar là một nhánh của Ngữ hệ Nam Á (Austroasiatic) (còn gọi là Môn-Khmer) được sử dụng ở các cộng đồng không
+                chỉ ở vùng Tây Nguyên và Duyên hải Việt Nam mà còn ở nam Lào và đông Campuchia [CH13]. Tiếng Bahnar được trải qua quá
+                trình nghiên cứu phát triển tương đối lâu dài. Hệ thống chữ viết Bahnar được các giáo sĩ người Pháp trong Hội truyền
+                giáo Kontum đặt nền móng nghiên cứu và đến năm 1861 được dùng để dịch Kinh thánh cũng như giảng đạo. Đến khoảng những
+                năm 1965-1975, Viện chuyên khảo ngữ học Sài Gòn (Summer Institute of Linguistics - SIL) đã đưa ra một số sửa đổi trong
+                tiếng Bahnar để tiện in ấn. Đến sau năm 1975, Sở giáo dục tỉnh Gia Lai - Kontum tiếp tục có những nghiên cứu, công nhận
+                một số thay đổi và biên soạn sách học tiếng Bahnar. Cho đến ngày nay tiếng Bahnar vẫn đang được hoàn thiện để vừa có sự
+                thống nhất cũng vừa giữ được bản sắc các địa phương [Ngu+08].</p>
+                <p>Do ảnh hưởng bởi yếu tố địa lý, văn hóa và có nhiều thay đổi trong lịch sử, tiếng Bahnar tồn tại khá nhiều phương ngữ.
+                Những phương ngữ chính gồm có: Bahnar Roh (huyện Đak Đoa, Mang Yang tỉnh Gia Lai), Bahnar Tơlô (huyện Đak Pơ, K’Bang,
+                Kông Chro tỉnh Gia Lai), Bahnar Kon KơĐeh (huyện K’Bang tỉnh Gia Lai; tỉnh Kontum) Bahnar Bơnâm (huyện K’Bang, thị xã An
+                Khê tỉnh Gia Lai) và Bahnar Kriêm (huyện Vĩnh Thạnh Bình Định province; tỉnh Phú Yên). Trong đó sự khác biệt giữa các
+                phương ngữ chỉ ở phương diện từ vựng [Jil+18].</p>
+                <p>Theo cuốn Chữ BaNa Kriêm Bình Định [Ngu+08], bẳng chữ cái tiếng Bahnar gồm các nguyên âm: a, e, ê, o, ô, ơ, u, ư, i; các
+                phụ âm: b, c, d, ,đ, g, h, j, k, l, m, n, p, r, s, t, w, y; và 2 dấu là dấu vành trăng khuyết (˘) trên các nguyên âm và
+                dấu phẩy trên (’ ) trước các phụ âm.</p>
+                <p></p>
+            </div>
+        </div>
+        <div id = "Model" class = 'tabcontent'>
+            <div class="translation-table">
+                <h1> Transformer</h1>
+                <p>Năm 2017, Vaswani và cộng sự đề xuất mô hình Transformer [Vas+17] giải quyết các nhược được nhiều nhược điểm của mô hình
+                RNN. Mô hình Transformer cũng tuân theo kiến trúc seq2seq nhưng với encoder và decoder được xây dựng từ các khối scaled
+                dot-product attention và feed forward.</p>
+                <img src = "images/transformer.png" alt = "transformer">
+                <p>Encoder gồm N = 6 lớp giống nhau (encoder layer ) xếp chồng lên nhau. Mỗi lớp được cấu tạo từ 2 lớp con (sub-layer ):
+                multi-head self-attention với chức năng nhúng ngữ nghĩa các từ xung quanh vào các vector biểu diễn từ và fully connected
+                feedforward network với chức năng tính toán, rút trích thông tin. Đầu ra của mỗi lớp con này được áp dụng lớp residual
+                connection [He+16] và layer normalization [BKH16]: LayerNorm(x + Sublayer(x)) với mục đích hạn chế vanishing gradient,
+                giảm training error và giảm thời gian huấn luyện. Để áp dụng residual connection, các lớp con của mô hình đều có đầu ra
+                cùng kích thước d model = 512.</p>
+                <p>Decoder gồm N = 6 lớp giống nhau (decoder layer ) xếp chồng lên nhau. Bên cạnh 2 lớp con như encoder, decoder còn có
+                thêm lớp con thứ 3 thực hiện attention với đầu ra của từng từ sau khi qua encoder. Lớp con này đóng vai trò lấy context
+                vector giúp mô hình tập trung vào một số từ trong chuỗi nguồn khi sinh (dịch) một từ sang chuỗi đích. Ngoài ra, Vaswani
+                và cộng sự còn thêm một lớp mask để giống như lúc dự đoán (predict), khi huấn luyện mô hình tránh lấy thông tin ngữ cảnh
+                của các từ tương lai.</p>
+                <br>
+                <h1> BERT </h1>
+                <p>Năm 2018, Devlin và cộng sự đề xuất mô hình Pre-training of Deep Bidirectional Trans- formers for Language Understanding
+                (BERT) [Dev+18]. BERT được huấn luyện trên lượng dữ liệu lớn và có thể xem là một pre-trained model thường được
+                fine-tune cùng với một số lớp nơ-ron đơn giản để tạo nên những mô hình state-of-the-art giải quyết nhiều bài toán khác
+                nhau trong lĩnh vực xử lý ngôn ngữ tự nhiên như question answering [DS13], language inference [Mac09],... </p>
+                <p>BERT dùng chung một kiến trúc với khối encoder của Transformer, và được huấn luyện trên hai mục tiêu: masked language
+                modeling (MLM) và next sentence prediction (NSP). Với mục tiêu NSP, mô hình nhận đầu vào các cặp chuỗi ngăn cách nhau
+                bởi token [SEP] và được huấn luyện để dự đoán đó có phải là hai chuỗi liên tiếp hay không. Với mục tiêu MLM: 15% token
+                trong chuỗi đầu vào sẽ được mask (với 80% trong số đó thực sự bị thay thế bởi token [MASK], 10% số token được thay thế
+                ngẫu nhiên bởi một token khác và 10% còn lại được giữ không đổi), sau đó BERT được huấn luyện để dự đoán nhưng token bị
+                mask dựa vào ngữ cảnh (context) của những token xung quanh. Vì vậy đầu ra của BERT có để được dùng như một lớp embedding
+                đã được nhúng vào thông tin ngữ cảnh từ cả hai hướng nhờ vào cơ chế self-attention trong mỗi lớp Transformer encoder.</p>
+                <img src = "images/Bert1.png" alt = "Bert1">
+                <p>Năm 2019, Liu và cộng sự đưa ra mô hình RoBERTa (Robustly Optimized BERT Pretraining Approach) [Liu+19] áp dụng cùng kiến trúc với BERT với một số thay đổi trong chiến lược huấn luyện: (i) thời gian huấn luyện lâu hơn với nhiều dữ liệu liệu và batch lớn hơn; (ii) bỏ mục tiêu NSP; (iii) huấn luyện với chuỗi dài hơn; và (iv) áp dụng dynamic masking pattern. RoBERTa cũng đạt được nhiều thành tựu trên GLUE, RACE và SQuAD. Nhìn chung RoBERTa vẫn tuân theo kiến trúc encoder của Transformer và có thể sử dụng với các mục đích tương tự BERT. Năm 2020, Dat Quoc Nguyen và cộng sự đưa ra PhoBERT [NN20], một phiên bản khác của RoBERTa được huấn luyện trên dữ liệu tiếng Việt và đạt được những kết quả state-of-the-art trên một số bài toán NLP như part-of-speech tagging, dependency parsing, named-entity recognition và natural language inference cho tiếng Việt. </p>
+                <h1> Bart </h1>
+                <p> Năm 2019, Lewis và cộng sự đề xuất BART [Lew+19], một mô hình pretrained sequence-to- sequence sử dụng kiến trúc Transformer. Đầu vào của BART được huấn luyện bằng cách áp dụng rất nhiều loại nhiễu (noise) như: token masking (thay thế ngẫu nhiên các token bằng token [MASK]), token deletion (ngẫu nhiên xóa một số token), text infilling (chọn một số đoạn (span) kể đoạn có chiều dài bằng 0 và thay thế cả đoạn bằng token [MASK]), sentence permutation (hoán đổi vị trí các câu), và document rotation (chọn ngẫu nhiên một token và xoay văn bản sao cho token này đứng ở đầu). Sau đó BART được huấn luyện để sinh ra chuỗi ban đầu. </p>
+                <img src = "images/Bart.png" alt = "Bart.png">
+                <p>Vì có cả encoder và decoder, ngoài việc có thể áp dụng cho các bài toán hiểu ngôn ngữ (language comprehension task ) như
+                BERT, BART còn có thể được fine-tune cho bài toán sinh chuỗi (language generation) kể cả dịch máy. Đối với bài toán dịch
+                máy, lớp embedding của encoder của BART được thay thế bằng một khối encoder mới còn cả mô hình BART được xem như một
+                khối decoder. Khối encoder mới này được huấn luyện để có thể biểu diễn ngôn ngữ nguồn dưới dạng mà BART có thể dùng để
+                sinh ra chuỗi trong ngôn ngữ đích - ngôn ngữ mà BART được huấn luyện trước đó.</p>
+                <p>Năm 2020, một phiên bản đa ngôn ngữ của BART là mBART [Liu+20] được huấn luyện trên 25 ngôn ngữ. Năm 2021, Nguyen Luong
+                Tran và cộng sự đã huấn luyện biến thể của BART trên dữ liệu tiếng Việt và đặt tên BARTpho [TLN21]. BARTpho đã cho kết
+                quả tốt hơn so với mBART trên thang đánh giá ROUGE [Lin04] trong bài toán tóm tắt văn bản tiếng Việt.</p>
+                <h1>BERT-fused NMT</h1>
+                <p>Năm 2020, Zhu và cộng sự sử dụng BERT [Dev+18] để trích xuất thông tin chuỗi đầu vào, thông tin này sau đó được kết nối
+                (fused ) với mỗi lớp encoder và decoder của mô hình Transformer [Vas+17] bằng cơ chế attention. Khi đó so với kiến trúc
+                mô hình Transformer gốc, mô hình dịch máy này, với tên gọi BERT-fused NMT [Zhu+20], có thêm 2 module BERT-encoder
+                attetion và BERT-decoder attention với BERT-encoder attention và BERT-decoder attention chính là scaled dot-product
+                attention [Vas+17] với key, value xuất phát từ đầu ra của BERT, còn query thì từ đầu ra của lớp encoder hay decoder
+                trước đó.</p>
+                <img src = "images/Bart-fused NMT.png" alt = "Bart-fused NMT" style = "">
+                <p>Bằng cách dùng kết quả trung bình cộng của BERT-encoder attetion và self-attention trong encoder hay trung bình cộng của
+                BERT-decoder attention và encoder-decoder attention trong decoder để đưa vào module kế tiếp, mô hình dịch máy có thêm
+                được thông tin trích xuất từ mô hình BERT huấn luyện sẵn ở mỗi lớp encoder, decoder. </p>
+                <h1>Loanformer</h1>
+                <p>Mô hình Loanformer - Loanwords Processing Transformer mà nhóm tác giả đề xuất cho bài toán dịch máy Việt - Bahnar trong
+                tạp chí TALLIP (ACM Transactions on Asian and Low-Resource Language Information Processing): Special Issue on New Trends
+                in Machine Translation and Technology for Low-Resource Language (manuscript), được xây dựng dựa trên mô hình BERT-fused
+                NMT [Zhu+20] kết hợp với mô hình Pointer Generator Network [SLM17], trong đó BERT hỗ trợ mô hình trích xuất đặc trưng,
+                thông tin ngữ nghĩa chuỗi nguồn trước khi được dịch bởi kiến trúc seq2seq; còn Pointer Generator Network giúp copy các
+                từ vay mượn từ chuỗi nguồn sang chuỗi đích nhờ vào các trọng số được huấn luyện.</p>
+                <img src = "images/Loanformer.png" alt = "Loanformer" style = "transform: scale3d(1, 1, 1) rotate(0deg);">
+                <p>BERT-fused NMT đóng vai trò là xương sống của mô hình NMT với encoder và decoder hoàn toàn giống với cài đặt của Zhu và
+                cộng sự [Zhu+20]. Tuy nhiên, BERT được thay thế bằng PhoBERT để để có thể trích xuất đặc trưng cho câu tiếng Việt tốt
+                hơn. Mặc dù chiến lược huấn luyện PhoBERT dựa trên RoBERTa thay vì BERT, nhưng vì sử dụng chung kiến trúc encoder của
+                Transformer và được huấn luyện với mục tiêu MLM cho tác vụ hiểu ngôn ngữ, PhoBERT có thể trích xuất đặc trưng, thông tin
+                ngữ cảnh cho câu tiếng Việt để đưa vào các lớp encoder, decoder tương tự như cách mà BERT làm. Ngoài PhoBERT, tác giả
+                còn làm thí nghiệm với BARTpho và encoder của BARTpho với mục đích tương tự.</p>
+                <p>Pointer Generator Network gồm 3 sub-module là Encoder-Decoder Attention with non- special token mask, GenProb và
+                CombineDistribution. Khối Encoder-Decoder attention with non-special token mask áp dụng attention cho đầu ra của encoder
+                và đầu ra của decoder để tính context matrix và attention distribution matrix dùng cho mục đích sao chép từ trong chuỗi
+                nguồn sang chuỗi đích như trong mô hình Pointer Generator Network của See và cộng sự [SLM17] nhưng với one-head scaled
+                dot-product attention [Vas+17] thay vì additive attention [BCB14]. Bằng cách này mô hình có khả năng giải quyết vấn đề
+                từ không có trong từ điển (out-of-vocab - OOV ) và sử dụng từ vay mượn trong quá trình dịch. Ngoài ra, khác với bài toán
+                tóm tắt văn bản mà See và cộng sự hay Deaton và cộng sự [Dea+19] giải quyết, việc chọn 1 từ bất kỳ trong chuỗi đầu vào
+                làm kết quả đầu ra rất bình thường như cách con người vẫn làm vì đầu vào và đầu ra cùng chung một ngôn ngữ, bài toán
+                dịch máy có ngôn ngữ nguồn và ngôn ngữ đích khác nhau nên việc chọn một từ đầu vào làm đầu ra chỉ nên được thực hiện cho
+                những từ OOV và các từ vay mượn như số, tên riêng và các ký tự đặc biệt như: dấu câu, biểu thức toán học, đơn vị đo
+                lường (gọi chung là special token). Vì vậy khối encoder-decoder attention này cần có 1 non-special token mask để đánh
+                dấu các non-special token, các token được mask sẽ có xác suất bằng 0 trong attention distribution tương ứng với việc
+                không có khả năng được sao chép. Hai sub-module còn lại là GenProbs và CombineDistribution lần lượt thực hiện chức năng
+                xác định generation probability và kết hợp attention distribution và vocab distribution thành final distribution.</p>
+            </div>
+        </div>
+        <div id = "Data augmentation" class = 'tabcontent'>
+            <div class = "translation-table">
+            <h1>Phương pháp sử dụng từ đồng nghĩa</h1>
+            <p>Phương pháp này còn được gọi là phương pháp thay thế từ (word replacement), hoạt động bằng cách giữ nguyên chuỗi đích
+            (target sequence) và thay thế các từ trong chuỗi nguồn (source sequence) hoặc giữ nguyên chuỗi nguồn và thay thế từ
+            trong chuỗi đích bằng các từ đồng nghĩa với nó để tạo ra nhiều cặp song ngữ mới. Đối với bài toán Việt - Bahnar hiện
+            tại, do nguồn tài liệu về từ vựng, đặc biệt là từ đồng nghĩa trong tiếng Bahnar vô cùng khan hiếm nên tác giả chỉ tập
+            trung theo hướng tiếp cận thứ nhất là sử dụng các từ đồng nghĩa trong tiếng Việt.</p>
+            <img src = "images/PPTuDongNghia.png" alt = "Phuong phap tu dong nghia">
+            <h1>Phương pháp dịch ngược</h1>
+            <p>Phương pháp dịch ngược (back translation [Edu+18]) giúp tổng hợp tập dữ liệu song ngữ từ nguồn dữ liệu đơn ngữ. Với tập
+            dữ liệu song ngữ đang có, mô hình được huấn luyện để dịch từ ngôn ngữ đích sang ngôn ngữ nguồn (gọi là mô hình
+            Model-T-S). Sau đó, sử dụng mô hình Model-T-S cho tập dữ liệu đơn trong ngôn ngữ đích để tổng hợp dữ liệu trong ngôn ngữ
+            nguồn tương ứng. Cuối cùng, tập dữ liệu song ngữ tổng hợp được cùng với tập dữ liệu song ngữ ban đầu được dùng để huấn
+            luyện mô hình Model-S-T dịch từ ngôn ngữ nguồn sang ngôn ngữ đích.</p>
+            <h1>Phương pháp copied corpus</h1>
+            <p>Phương pháp copied corpus [CMH17] tạo ra tập dữ liệu song ngữ từ tập dữ liệu đơn ngữ bằng cách copy hoàn toàn tập dữ
+            liệu trong ngôn ngữ đích làm ngôn ngữ nguồn, khi đó mỗi câu trong ngôn ngữ nguồn hoàn toàn giống với câu trong ngôn ngữ
+            đích. Tập dữ liệu song ngữ này được gọi là copied corpus. Sau đó copied corpus được trộn với tập dữ liệu song ngữ thông
+            thường để huấn luyện mô hình.</p>
+        </div>
+        </div>
+        <div id = "Processing" class = 'tabcontent'>
+            <div class = "translation-table">
+            <h1>Thu thập dữ liệu</h1>
+            <p>Do người Bahnar sống tập trung chủ yếu ở khu vực Tây Nguyên (Gia Lai, Kontum) và Duyên hải miền trung (Bình Định, Phú
+            Yên) [Vie20] nên dữ liệu cần thu thập chủ yếu có nguồn gốc tập trung trong phạm vi các tỉnh này. Các đối tượng cần thu
+            thập gồm:</p>
+            <ul>
+                <li>Dữ liệu dạng pdf hoặc hình ảnh từ các tài liệu nghiên cứu, giảng dạy tiếng Bahnar; các tác phẩm văn học, sách, báo, tạp
+                chí song ngữ Việt - Bahnar,...</li>
+                <li>Dữ liệu dạng text từ nội dung các bản tin của đài phát thanh, chương trình truyền hình tại các địa phương.</li>
+            </ul>
+            <p>Trong đó, yêu cầu quan trọng là dữ liệu cần tồn tại ở dạng các câu hoặc đoạn văn bản song ngữ để dùng trong việc huấn
+            luyện mô hình học sâu. Các dữ liệu dạng khác như: đơn ngữ, dữ liệu dạng từ điển, dạng ngữ vựng đối chiếu... được dùng để
+            hỗ trợ trong các phương pháp làm giàu dữ liệu, đánh giá kết quả,...</p>
+            <p>Đối với các dữ liệu dạng pdf hoặc hình ảnh, phương pháp nhận diện ký tự quang học (Optical Character Recognition - OCR)
+            [PPP12] được sử dụng với hỗ trợ từ các thư viện Pytesserect, OpenCV để trích xuất nội dung văn bản vào định dạng file
+            .txt. Mặc dù hiện nay Pytesserect chưa hỗ trợ cho tiếng Bahnar nhưng do sự tương đồng trong bảng chữ cái giữa tiếng Việt
+            và tiếng Bahnar nên định dạng tiếng Việt được lựa chọn để trích xuất cho cả văn bản tiếng Việt và tiếng Bahnar. Riêng
+            phần tiếng Bahnar sau đó sẽ được áp dụng một số heuristic để cho kết quả chính xác:</p>
+        </div>
+
+        </div>
+        <div id = "References" class = 'tabcontent'>
+
+        </div>
+    </header>
+    <script src="js/script.js"></script>
+</body>
+</html>
