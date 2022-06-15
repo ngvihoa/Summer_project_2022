@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Helvetica;
+    font-size: 15px;
+}
+
+/*.margin-middle{
+    vertical-align: middle;
+    align-items: center;
+}
+
+div.row > div div:nth-child(1){
+    width: 98%;
+    border: 1px solid blue;
+    height: auto;
+    padding: 5px;
+}
+*/
+#log-name{      /*test*/
+    height: 100px;
+    width: 50%;
+    border: 1px solid black;
+    background-color: lightyellow;
+    float: left;
+}
+
+#gray-bar{
+    height: 100px;
+    width: 100%;
+    /*border: 1px solid black;*/
+    background-color: #C5EAF7;
+    position: absolute;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+#button{
+    width: 60px;
+    height: 40px;
+    margin-right: 25px;
+    margin-top: 30px;
+    /*border: 1px solid black;*/
+    background-color: none;
+    float: right;
+}
+.small-bar{
+    width: 80%;
+    height: 10px;
+    background-color: #35AEF9;
+    margin-left: 10%;
+    margin-bottom: 4.5px;
+    border-radius: 10px;
+}
+#header-box {      
+    height: 110px;
+    width: 100%;
+    /*border: 1px solid green;*/
+    background-color: none;
+}
+
+/*  DESKTOP SIZE   */
+@media (min_width: 800px){
+    .col-lg-25pc, .col-lg-30pc, .col-lg-40pc, .col-lg-50pc, .col-lg-60pc, .col-lg-75pc, .col-lg-80pc, .col-lg-100pc{
+        float: left;
+        border: 1px solid black;
+    } 
+    .col-lg-25pc{
+        width: 25%;
+    }
+    .col-lg-100pc{
+        width: 100%;
+    }
+    .col-lg-30pc{
+        width: 30%;
+    }
+    .col-lg-40pc{
+        width: 40%;
+    }
+    .col-lg-50pc{
+        width: 50%;
+    }
+    .col-lg-60pc{
+        width: 60%;
+    }
+    .col-lg-75pc{
+        width: 75%;
+    }
+    .col-lg-80pc{
+        width: 80%;
+    }
+}
+
+/*  END OF DESKTOP SIZE   */
+
+/* HEADER */
+.row{ 
+    width: 100%; 
+}
+.col{ height: 100%; }
+
+
+#logo-title{
+    width: 75px;
+    height: 75px;
+    margin: 20px 10px 10px 10px;
+    float: left;
+}
+.header-title{
+    padding-top: 30px;
+    float: left;
+}
+.header-title h1{
+    font-size: 1.3em;
+    color: #032B91;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+
+nav a, nav a:hover, nav a:focus {
+    text-decoration: none;
+}
+
+/* END OF HEADER */
+
+#translation-table{
+    width: 100%;
+    height: 320px;
+    /*border: 1px solid red;*/
+    clear: left;
+    background-color: white;
+    box-shadow: .1px 0px .5px #35AEF9, -.1px 0px .5px #35AEF9, 0px .1px .5px #35AEF9, 0px -.1px .5px #35AEF9;
+}
+.text-box{
+    width: 90px;
+    height: 35px;
+    border: .5px solid #35AEF9;
+    background-color: white;
+    border-radius: 2px;
+    float: left;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    text-align: right;
+    padding-right: 18px;
+    padding-top: 5px;
+    padding-left: 20px;
+}
+.text-img{
+    width: 20px;
+    height: 25px;
+    float: left;
+}
+.lang-box{
+    width: 50%;
+    height: 100%;
+    border: .5px solid #35AEF9;
+    float: left;
+}
+.box-upper-inner-table{
+    width: 100%;
+    height: 20%;
+    border-bottom: .5px solid #35AEF9;
+    font-size: 1.1em;
+    padding-left: 7%;
+    padding-right: 7%;
+    /*padding-top: 5%;*/
+}
+.box-lower-inner-table{
+    width: 100%;
+    height: 80%;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+.bolding{
+    font-weight: bolder;
+    float: left;
+    margin-top: 25px;
+    margin-right: 50px;
+}
+.input-box{
+    width: 100%;
+    height: 100%;
+    border: .5px solid #35AEF9;
+    border-radius: 10px;
+    
+}
+#select-format{
+    width: 90px;
+    height: 32px;
+    border: .5px solid #35AEF9;
+    background-color: white;
+    border-radius: 2px;
+    float: left;
+    margin-top: 14px;
+    padding-left: 10px;
+    padding-top: 7px;
+    font-size: 1em;
+    font-weight: 0;
+}
+#translate-box{
+    width: 90px;
+    height: 32px;
+    border: none;
+    background-color: #1890FF;
+    border-radius: 2px;
+    float: right;
+    margin-top: 14px;
+    padding-left: 10px;
+    padding-top: 7px;
+    font-size: 1em;
+    font-weight: 0;
+    color: white;
+}
+#wave-edit{
+    height: 250px;
+    width: 110%;
+    align-items: center;
+    margin-top: 500px;
+    margin-left: 0px;
+}
+
+
