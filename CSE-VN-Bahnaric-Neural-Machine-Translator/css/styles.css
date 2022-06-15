@@ -7,6 +7,106 @@ body {
     font-family: Helvetica;
     font-size: 15px;
 }
+/* PHAN CUA VINH */
+p {
+    line-height : 1.6;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+ul {
+    list-style-type: disc;
+}
+li
+{
+    display: list-item;
+    margin-left: 70px;
+    margin-right: 50px;
+    line-height: 1.6;
+
+}
+/*align header */
+h1 {
+    line-height: 1.6;
+}
+.section-header
+{
+    font-size: 1.5em;
+    font-weight: auto;
+    line-height: 1.6;
+    margin-left:50px;
+    margin-right:50px;
+    margin-bottom: 24px;
+    margin-top: 20px;
+}
+/*align image */
+img {
+    line-break: auto;
+    align-items: center;
+}
+.column {
+    float: left;
+    width: 50%;
+    padding: 5px 50px 5px;
+}
+.center
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width : 50%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#HethongChuVietBahnar
+{
+    height: 10%;
+}
+
+/* tab style */
+.tab{
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #C5EAF7;
+}
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.tab button : hover{
+    background-color: #ddd
+}
+.tab button.active {
+    background-color: #98ddf7;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+/* PHAN CUA VINH */
+
+
+
+/* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 
 /*.margin-middle{
     vertical-align: middle;
