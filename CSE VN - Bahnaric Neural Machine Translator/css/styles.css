@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.float-left{
+    float: left !important;
+}
+.float-right{
+    float: right !important;
+}
+
+/* HEADER */
+.header{
+    height: 70px;
+    text-align: center;
+    position: relative;
+    clear: both;
+}
+#header-logo, #navbar-logo{
+    width: 50px;
+    height: 50px;
+    margin: 10px 20px 10px 30px;
+}
+.header .title{
+    padding-top: 12px;
+    text-align: center;
+    display: inline-block;
+}
+.header h1{
+    font-size: 1.2em;
+    color: #032B91
+}
+.header h1 span{
+    color: #1488DB;
+}
+.header a, .nav-bar a:hover, .nav-bar a:focus{
+    text-decoration: none;
+}
+.header-button{
+    height: 55px;
+    width: 55px;
+    margin: 5px 30px auto 20px;
+    border-radius: 100%;
+    border: 0;
+    background-color: #fff;
+    color: #afabab;
+}
+.active, .header-button:hover, .btn-translation-type:hover{
+    background-color: #f0f0f0;
+}
+.header-button:hover, .btn-translation-type:hover{
+    cursor: pointer;
+}
+.icon-bar{
+    background-color: #afabab;
+    height: 2.5px;
+    width: 40%;
+    border-radius: 1px;
+    margin: 0 auto;
+}
+.icon-bar + .icon-bar{
+    margin-top: 4px;
+}
+/* END OF HEADER */
+
+
+
+/* NAVIGATION BAR */
+#navbar-logo{
+    margin: 10px auto;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translate(300px, 0);
+    width: 250px;
+    height: 100vh;
+    overflow: auto;
+    background-color: #fff;
+    text-align: center;
+    border-left: 1px solid #afabab;
+    box-shadow: -1px 0px 10px #afabab;
+    transition: transform 0.2s linear;
+}
+.navbar a, .navbar a:hover, .navbar a:focus{
+    text-decoration: none;
+}
+.navbar a + hr{
+    margin: 10px auto 20px;
+}
+.navbar li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-list li a{
+    width: 100%;
+    padding: 20px 10px;
+    text-align: left;
+    font-size: 1em;
+    color: #afabab;
+}
+.navbar-list li a:hover, .navbar-list li a:focus, .nav-list li a.active{
+    background-color: #f0f0f0;
+    color: #000;
+    font-weight: bold;
+}
+/* END OF NAVIGATION BAR */
+
+
+/* TRANSLATOR */
+#main-content{
+    margin-top: -80px
+}
+.grey-bar{
+    background-color: #fafafa;
+    height: 100px;
+    border-top: 1px solid #afabab;
+    border-bottom: 1px solid #afabab;
+}
+.btn-holder{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-holder{
+    margin-bottom: 20px;
+}
+.btn-translation-type{
+    height: 35px;
+    padding: 5px 25px;
+    margin-right: 5px;
+    text-align: center;
+    background-color: #fafafa;
+    border: 1px solid #afabab;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #1488DB;
+    font-weight: 500;
+}
+.container{
+    margin: 0 auto;
+    width: 80%;
+}
+.translator{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #afabab;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px #afabab;
+}
+.translator .text-input{
+    display: flex;
+    border-top: 1px solid #afabab;
+}
+.text-input .vn-text{
+    border-right: 1px solid #afabab;
+    border-radius: 0 0 0 5px;
+}
+.text-input textarea{
+    min-height: 175px;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    padding: 20px 15px;
+}
+.controls, li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.controls li span{
+    color: #1488DB;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.controls{
+    list-style: none;
+    padding: 15px 15px;
+}
+.controls .row select{
+    border: none;
+    outline: none;
+    font-size: 1em;
+}
+#btn-translate{
+    width: 100%;
+    margin: 20px auto;
+    padding: 14px;
+    border: none;
+    outline: none;
+    background-color: #1488DB;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+/* END OF TRANSLATOR */
+
+/* MEDIUM SCREEN */
+@media (max-width: 991px){
+     /* TRANSLATOR */
+    .container{
+        width: 100%;
+    }
+    /* END OF TRANSLATOR */
+}
+
+/* SMALL SCREEN */
+@media (max-width: 767px){
+
+    /* TRANSLATOR */
+    .translator .text-input{
+        display: block;
+    }
+    /* END OF TRANSLATOR */
+}
