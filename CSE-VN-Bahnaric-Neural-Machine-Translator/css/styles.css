@@ -273,6 +273,7 @@ nav a, nav a:hover, nav a:focus {
     margin-top: 5%;
     background-color: lightgreen;
 }
+
 .img-format2{
     width: 220px;
     height: 250px;
@@ -298,6 +299,27 @@ nav a, nav a:hover, nav a:focus {
 
 
 /*------------------------------ABOUT-------------------------*/
+/*------HOME-------*/
+.row1 {
+    display: flex;
+    background-color: #abe3f7;
+}
+.column1
+{
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size:large;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+}
+.introImage-format
+{
+    width: 148px;
+    height: 148px;
+
+}
 .content-area{
     width: 100%;
     height: auto;
@@ -369,7 +391,7 @@ img {
 .tab{
     overflow: hidden;
     /*border: 1px solid #ccc;*/
-    background-color: #f1f1f1
+    background-color: #f1f1f1;
     margin-top: 0%;
 }
 .tab button {
@@ -394,6 +416,12 @@ img {
     display: none;
     padding: 6px 12px;
     /*border: 1px solid #ccc;*/
+    border-top: none;
+}
+.tabcontentHome
+{
+    display: block;
+    padding: 6px 12px;
     border-top: none;
 }
 
