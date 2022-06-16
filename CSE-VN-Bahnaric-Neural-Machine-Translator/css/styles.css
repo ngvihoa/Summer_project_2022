@@ -7,8 +7,308 @@ body {
     font-family: Helvetica;
     font-size: 15px;
 }
-/* PHAN CUA VINH */
-p {
+
+/* -----------------------------HEADER----------------------------- */
+
+#gray-bar{
+    height: 100px;
+    width: 100%;
+    /*border: 1px solid black;*/
+    background-color: #C5EAF7;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 30px;
+}
+#button{
+    width: 60px;
+    height: 50px;
+    margin-right: 25px;
+    margin-top: 25px;
+    border: 0;
+    background-color: white;
+    padding-top: 2.5px;
+    float: right;
+}
+#button:hover{
+    cursor: pointer;
+    border: 2px solid #35AEF9;
+}
+.small-bar{
+    width: 80%;
+    height: 10px;
+    background-color: #35AEF9;
+    margin-left: 10%;
+    margin-bottom: 4.5px;
+    border-radius: 10px;
+}
+.header-box {      
+    height: 110px;
+    width: 100%;
+    /*border: 1px solid green;*/
+    background-color: none;
+}
+#logo-title{
+    width: 75px;
+    height: 75px;
+    margin: 20px 10px 10px 10px;
+    float: left;
+}
+.header-title{
+    padding-top: 30px;
+    float: left;
+}
+.header-title h1{
+    font-size: 1.3em;
+    color: #032B91;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+
+nav a, nav a:hover, nav a:focus {
+    text-decoration: none;
+}
+
+
+/* -----------------------------END OF HEADER----------------------------- */
+
+/*------------------------------TRANSLATOR------------------------------*/
+
+#translation-table{
+    width: 80%;
+    height: 320px;
+    /*border: 1px solid red;*/
+    clear: left;
+    background-color: white;
+    box-shadow: 0px 0px 15px #35AEF9;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.margin-side{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.text-box{
+    width: 90px;
+    height: 35px;
+    border: .5px solid #35AEF9;
+    background-color: white;
+    border-radius: 2px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    text-align: right;
+    padding-right: 18px;
+    padding-top: 5px;
+    padding-left: 20px;
+}
+.invisible{
+    border: 0;
+    background-color: 0;
+}
+.text-img{
+    width: 20px;
+    height: 25px;
+    float: left;
+}
+.lang-box{
+    width: 50%;
+    height: 100%;
+    border: .5px solid #35AEF9;
+    float: left;
+}
+.box-upper-inner-table{
+    width: 100%;
+    height: 20%;
+    border-bottom: .5px solid #35AEF9;
+    font-size: 1.1em;
+    padding-left: 7%;
+    padding-right: 7%;
+    /*padding-top: 5%;*/
+}
+.box-lower-inner-table{
+    width: 100%;
+    height: 80%;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+.bolding{
+    font-weight: bolder;
+    float: left;
+    margin-top: 25px;
+    margin-right: 50px;
+}
+.input-box{
+    width: 100%;
+    height: 100%;
+    border: .5px solid #35AEF9;
+    border-radius: 10px;
+    padding: 5px 5px 5px 5px;
+}
+#select-format{
+    width: 90px;
+    height: 32px;
+    border: .5px solid #35AEF9;
+    background-color: white;
+    border-radius: 2px;
+    float: left;
+    margin-top: 14px;
+    padding-left: 10px;
+    padding-top: 7px;
+    font-size: 1em;
+    font-weight: 0;
+}
+#translate-box{
+    width: 90px;
+    height: 32px;
+    border: none;
+    background-color: #1890FF;
+    border-radius: 2px;
+    float: right;
+    margin-top: 14px;
+    padding-left: 10px;
+    padding-top: 7px;
+    font-size: 1em;
+    font-weight: 0;
+    color: white;
+}
+
+
+/*------------------------------END OF TRANSLATOR------------------------------*/
+
+/*------------------------------CONTACT------------------------------*/
+
+#contact-head{
+    width: 120px;
+    height: 40px;
+    border: 0;
+    background-color: none;
+    margin-left: auto;
+    margin-right: auto;
+    /*margin-bottom: 30px;*/
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2em;
+    color: #1890FF;
+}
+
+/*  -------------------------   */
+.contact-info1{
+    width: 100%;
+    height: 400px;
+    border: 1px solid red;
+    background-color: none;
+    /*padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 15%;
+    padding-right: 15%;*/
+    text-align: left;
+}
+.contact-info2{
+    width: 100%;
+    height: 400px;
+    border: 1px solid red;
+    background-color: none;
+    /*padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 15%;
+    padding-right: 15%;*/
+    text-align: right;
+}
+
+#first-contact{
+    width: 80%;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 10px solid blue;
+    border-left: 10px solid blue;
+    border-bottom-left-radius: 50px;
+    background-color: none;
+    text-align: left;
+
+}
+#second-contact{
+    width: 80%;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 10px solid blue;
+    border-right: 10px solid blue;
+    border-bottom-right-radius: 50px;
+    background-color: none;
+    text-align: right;
+
+}
+/*  ----------------------------------- */
+.obj-contact{
+    width: 100%;
+    height: 1500px;
+    border: 1px solid black;
+    background-color: lightyellow;
+}
+.name_contact{
+    width: 200px;
+    height: 30px;
+    border: 1px solid black;
+    background-color: orchid;
+}
+.margin-name-box-left{
+    margin-top: -120px;
+    margin-left: 15%;
+}
+.margin-name-box-right{
+    margin-top: 100px;
+    margin-left: 72%;
+}
+
+.img-format1{
+    width: 220px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-left: 10%;
+    margin-top: 5%;
+    background-color: lightgreen;
+}
+.img-format2{
+    width: 220px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-right: 10%;
+    margin-top: 5%;
+    background-color: lightgreen;
+}
+
+/*------------------------------END OF CONTACT------------------------------*/
+
+
+/*------------------------FOOTER------------------*/
+#wave-edit{
+    height: 200px;
+    width: 110%;
+    margin-top: 50px;
+}
+
+
+/*------------------------END OF FOOTER------------------*/
+
+
+/*------------------------------ABOUT-------------------------*/
+.content-area{
+    width: 100%;
+    height: auto;
+    clear: left;
+    background-color: none;
+    padding-top: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 30px;
+}
+.pp {
     line-height : 1.6;
     margin-left: 50px;
     margin-right: 50px;
@@ -68,8 +368,9 @@ img {
 /* tab style */
 .tab{
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #C5EAF7;
+    /*border: 1px solid #ccc;*/
+    background-color: #f1f1f1
+    margin-top: 0%;
 }
 .tab button {
     background-color: inherit;
@@ -82,23 +383,19 @@ img {
     font-size: 17px;
 }
 
-.tab button : hover{
-    background-color: #ddd
+.tab button:hover{
+    background-color: #00C5CD;
 }
-.tab button.active {
-    background-color: #98ddf7;
+.tab button:active {
+    background-color: #00F5FF;
 }
-
 /* Style the tab content */
 .tabcontent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     border-top: none;
 }
-/* PHAN CUA VINH */
-
-
 
 /* Clear floats after image containers */
 .row::after {
@@ -108,228 +405,4 @@ img {
 }
 
 
-/*.margin-middle{
-    vertical-align: middle;
-    align-items: center;
-}
-
-div.row > div div:nth-child(1){
-    width: 98%;
-    border: 1px solid blue;
-    height: auto;
-    padding: 5px;
-}
-*/
-#log-name{      /*test*/
-    height: 100px;
-    width: 50%;
-    border: 1px solid black;
-    background-color: lightyellow;
-    float: left;
-}
-
-#gray-bar{
-    height: 100px;
-    width: 100%;
-    /*border: 1px solid black;*/
-    background-color: #C5EAF7;
-    position: absolute;
-    padding-left: 8%;
-    padding-right: 8%;
-}
-#button{
-    width: 60px;
-    height: 40px;
-    margin-right: 25px;
-    margin-top: 30px;
-    /*border: 1px solid black;*/
-    background-color: none;
-    float: right;
-}
-.small-bar{
-    width: 80%;
-    height: 10px;
-    background-color: #35AEF9;
-    margin-left: 10%;
-    margin-bottom: 4.5px;
-    border-radius: 10px;
-}
-#header-box {      
-    height: 110px;
-    width: 100%;
-    /*border: 1px solid green;*/
-    background-color: none;
-}
-
-
-/*  END OF DESKTOP SIZE   */
-
-/* HEADER */
-.row{ 
-    width: 100%; 
-}
-.col{ height: 100%; }
-
-
-#logo-title{
-    width: 75px;
-    height: 75px;
-    margin: 20px 10px 10px 10px;
-    float: left;
-}
-.header-title{
-    padding-top: 30px;
-    float: left;
-}
-.header-title h1{
-    font-size: 1.3em;
-    color: #032B91;
-    text-transform: uppercase;
-    line-height: 1.3;
-}
-
-nav a, nav a:hover, nav a:focus {
-    text-decoration: none;
-}
-
-/* END OF HEADER */
-
-#translation-table{
-    width: 100%;
-    height: 320px;
-    /*border: 1px solid red;*/
-    clear: left;
-    background-color: white;
-    box-shadow: .1px 0px .5px #35AEF9, -.1px 0px .5px #35AEF9, 0px .1px .5px #35AEF9, 0px -.1px .5px #35AEF9;
-}
-.text-box{
-    width: 90px;
-    height: 35px;
-    border: .5px solid #35AEF9;
-    background-color: white;
-    border-radius: 2px;
-    float: left;
-    margin-top: 20px;
-    margin-right: 10px;
-    margin-bottom: 15px;
-    text-align: right;
-    padding-right: 18px;
-    padding-top: 5px;
-    padding-left: 20px;
-}
-.text-img{
-    width: 20px;
-    height: 25px;
-    float: left;
-}
-.lang-box{
-    width: 50%;
-    height: 100%;
-    border: .5px solid #35AEF9;
-    float: left;
-}
-.box-upper-inner-table{
-    width: 100%;
-    height: 20%;
-    border-bottom: .5px solid #35AEF9;
-    font-size: 1.1em;
-    padding-left: 7%;
-    padding-right: 7%;
-    /*padding-top: 5%;*/
-}
-.box-lower-inner-table{
-    width: 100%;
-    height: 80%;
-    padding-left: 7%;
-    padding-right: 7%;
-    padding-top: 7%;
-    padding-bottom: 7%;
-}
-.bolding{
-    font-weight: bolder;
-    float: left;
-    margin-top: 25px;
-    margin-right: 50px;
-}
-.input-box{
-    width: 100%;
-    height: 100%;
-    border: .5px solid #35AEF9;
-    border-radius: 10px;
-
-}
-#select-format{
-    width: 90px;
-    height: 32px;
-    border: .5px solid #35AEF9;
-    background-color: white;
-    border-radius: 2px;
-    float: left;
-    margin-top: 14px;
-    padding-left: 10px;
-    padding-top: 7px;
-    font-size: 1em;
-    font-weight: 0;
-}
-#translate-box{
-    width: 90px;
-    height: 32px;
-    border: none;
-    background-color: #1890FF;
-    border-radius: 2px;
-    float: right;
-    margin-top: 14px;
-    padding-left: 10px;
-    padding-top: 7px;
-    font-size: 1em;
-    font-weight: 0;
-    color: white;
-}
-#wave-edit{
-    height: 200px;
-    width: 110%;
-    margin-top: 500px;
-    margin-left: 0px;
-    position: fixed;
-    bottom: 0   ;
-}
-.tab{
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1
-}
-.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-}
-
-.tab button : hover{
-    background-color: #ddd
-}
-.tab button.active {
-    background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-}
-
-/* END OF HEADER */
-/*dưới 920px select-format và translation-box phải thành dấu ...*/
-/* dưới 500px thì bỏ chữ giữ ô 3 gạch
-
-dưới 400 bỏ hình
-dưới 760 cao thì bỏ hình
-
-
-*/
+/*------------------------------ABOUT-------------------------*/
