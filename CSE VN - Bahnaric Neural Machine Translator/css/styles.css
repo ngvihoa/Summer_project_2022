@@ -1,35 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 body {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
-.float-left{
-    float: left !important;
-}
-.float-right{
-    float: right !important;
+.no-display{
+    display: none !important;
 }
 
 /* HEADER */
 .header{
     height: 70px;
-    text-align: center;
-    position: relative;
-    clear: both;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
 }
 #header-logo, #navbar-logo{
     width: 50px;
     height: 50px;
-    margin: 10px 20px 10px 30px;
 }
 .header .title{
-    padding-top: 12px;
     text-align: center;
-    display: inline-block;
 }
 .header h1{
     font-size: 1.2em;
@@ -44,11 +42,14 @@ body {
 .header-button{
     height: 55px;
     width: 55px;
-    margin: 5px 30px auto 20px;
     border-radius: 100%;
     border: 0;
     background-color: #fff;
     color: #afabab;
+    text-align: center;
+}
+.header-button > i{
+    font-size: 1.5em;
 }
 .active, .header-button:hover, .btn-translation-type:hover{
     background-color: #f0f0f0;
@@ -77,8 +78,7 @@ body {
 .navbar{
     position: fixed;
     top: 0;
-    right: 0;
-    transform: translate(300px, 0);
+    right: -300px;
     width: 250px;
     height: 100vh;
     overflow: auto;
@@ -114,6 +114,23 @@ body {
 /* END OF NAVIGATION BAR */
 
 
+/* FOOTER */
+footer{
+    margin-top: 50px;
+    height: 100px;
+    border-top: 1px solid #afabab;
+    padding: 15px 0;
+    text-align: center;
+    line-height: 1.5;
+    color: #5F6368;
+    background-color: #fafafa;
+}
+footer span{
+    font-weight: bold;
+}
+/* END OF FOOTER */
+
+
 /* TRANSLATOR */
 #main-content{
     margin-top: -80px
@@ -140,9 +157,13 @@ body {
     background-color: #fafafa;
     border: 1px solid #afabab;
     border-radius: 5px;
-    font-size: 1em;
+}
+.btn-translation-type span{
+    font-size: 16px;
     color: #1488DB;
-    font-weight: 500;
+}
+.btn-translation-type span + span{
+    margin-left: 5px;
 }
 .container{
     margin: 0 auto;
@@ -155,24 +176,40 @@ body {
     background-color: #fff;
     box-shadow: 0px 0px 5px #afabab;
 }
-.translator .text-input{
+.translator .text-input, .translator .file-input{
     display: flex;
     border-top: 1px solid #afabab;
 }
-.text-input .vn-text{
+.text-input > div{
+    width: 100%;
+    height: auto;
+}
+.text-input .vn-text-col{
     border-right: 1px solid #afabab;
     border-radius: 0 0 0 5px;
 }
+.text-input .bn-text-col{
+    background-color: #fafafa;
+    border-radius: 0 0 5px 0;
+}
+.text-input .vn-text-col textarea{
+    height: 100%;
+    min-height: 120px;
+    border-radius: 0 0 0 5px;
+}
+.text-input .bn-text-col textarea{
+    height: 120px;
+}
 .text-input textarea{
-    min-height: 175px;
     width: 100%;
     border: none;
     outline: none;
     resize: none;
-    font-size: 1.3em;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 5px;
+    font-size: 1.2em;
     padding: 20px 15px;
+}
+.bn-text-col textarea{
+    background: none;
 }
 .controls, li{
     display: flex;
@@ -185,6 +222,9 @@ body {
     font-weight: bold;
     text-transform: uppercase;
 }
+.lang-abbr{
+    display: none;
+}
 .controls{
     list-style: none;
     padding: 15px 15px;
@@ -193,6 +233,73 @@ body {
     border: none;
     outline: none;
     font-size: 1em;
+    text-align: center;
+}
+.text-input > div > .controls{
+    background: none;
+    border-radius: 0 0 5px 0;   
+    height: 60px; 
+}
+.text-input > div > .controls button, .uploaded-file button{
+    font-size: 1.2em;
+    border-radius: 100%;
+    border: 0;
+    background: none;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    color: #5F6368;
+}
+.text-input > div > .controls button:hover, .uploaded-file button:hover{
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+.translator .file-input{
+    align-items: center;
+    justify-content: center;
+    height: 170px;
+    text-align: center;
+}
+.file-input .lb-file-upload{
+    background-color: #1488DB;
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+.file-input .lb-file-upload span + span{
+    margin-left: 5px;
+}
+.uploaded-file{
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    height: 90px;
+    border-radius: 5px;
+    background-color: #fafafa;
+    padding: 7px;
+}
+.uploaded-file div{
+    color: #5F6368;
+}
+.uploaded-file div:nth-child(1) span{
+    width: 70px;
+    font-size: 2.3em;
+}
+.uploaded-file div:nth-child(2){
+    width: calc(100% - 115px);
+}
+#uploaded-file-name{
+    color: #000;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+}
+#uploaded-file-size{
+    font-size: 0.8em;
+}
+.uploaded-file div:nth-child(2) div{
+    text-align: left;
 }
 #btn-translate{
     width: 100%;
@@ -206,10 +313,16 @@ body {
     font-size: 1.2em;
     cursor: pointer;
 }
+
 /* END OF TRANSLATOR */
+
 
 /* MEDIUM SCREEN */
 @media (max-width: 991px){
+    .no-display-md{
+        display: none !important;
+    }
+
      /* TRANSLATOR */
     .container{
         width: 100%;
@@ -219,10 +332,45 @@ body {
 
 /* SMALL SCREEN */
 @media (max-width: 767px){
+    .no-display-sm{
+        display: none !important;
+    }
+
+    /* HEADER */
+    .header{
+        height: 60px;
+        padding: 0 7px;        
+    }
+    .header .title{
+        text-align: left;
+    }
+    .header h1{
+        font-size: 1em;
+    }
+    .header-button{
+        height: 45px;
+        width: 45px;
+        margin: 7px 5px auto;
+        border-radius: 100%;
+        border: 0;
+        background-color: #fff;
+        color: #afabab;
+        text-align: center;
+    }
+    .header-button > i{
+        font-size: 1.3em;
+    }
+    /* END OF HEADER */
 
     /* TRANSLATOR */
     .translator .text-input{
-        display: block;
+        flex-direction: column;
+    }
+    .text-input .vn-text-col{
+        border: 0;
+    }
+    .lang-abbr{
+        display: inline-block !important;
     }
     /* END OF TRANSLATOR */
 }
