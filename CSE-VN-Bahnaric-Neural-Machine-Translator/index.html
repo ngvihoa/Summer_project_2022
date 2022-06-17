@@ -2,55 +2,95 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Vietnamese - Bahnaric Neural Machine Translator</title>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <div class="header-box">
-            <nav>
-                    <a href="index.html">
-                    <img id="logo-title" src="images/logo.png">
-                    <div id="title" class="header-title">
-                        <h1>Vietnamese - Bahnaric <br>Neural Machine Translator</h1>
-                    </div>
-                    </a>
-            </nav>
-            <button id="button">
-                <p class="small-bar"></p>
-                <p class="small-bar"></p>
-                <p class="small-bar"></p>
-            </button>
-        </div>
-    </header>
-    <div id="gray-bar"></div>
-    
-    <div class="margin-side" style="margin-top: -70px">
-        <div class="text-box"><div><img src="" class="text-img"></div><p style="margin-top: 4px">Text</p></div>
-        <div class="text-box"><div><img src="" class="text-img"></div><p style="margin-top: 4px">File</p></div>
-    </div>
-
-        <div id="translation-table">
-            <div class="lang-box">
-                <div class="box-upper-inner-table">
-                    <p class="bolding">Vietnamese</p>
-                    <div id="select-format"><p>Bartpho</p></div>
-                    <div id="translate-box"><p>Translate</p></div>
-                </div>
-                <div class="box-lower-inner-table"><textarea class="input-box"></textarea></div>
+        <nav id="header-nav" class="header">
+            <a href="#">
+                <img id="header-logo" class="float-left" src="images/logo.png">
+            </a>
+            <div class="title">
+                <a href="index.html">
+                    <h1>Vietnamese - Bahnaric<br>
+                    <span>Neural Machine Translator</span></h1>
+                </a>
             </div>
+            
+            <button id="btn-navbar" class="header-button float-right">
+                <div class="icon-bar"></div>
+                <div class="icon-bar"></div>
+                <div class="icon-bar"></div>
+            </button>
+        </nav>
+    </header>
 
-            <div class="lang-box">
-                <div class="box-upper-inner-table"><p class="bolding">Bahnaric</p></div>
-                <div class="box-lower-inner-table"><textarea class="input-box"></textarea></div>
-            </div>       
-        </div>
-    <footer style="overflow: hidden"><img src="images/wave.png" id="wave-edit"></footer>
-    
+
+
+
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <a href="#">
+            <img id="navbar-logo" src="images/logo.png">
+        </a>
+        <hr>
+        <ul class="navbar-list">
+            <li><a href="index_about.html">Home</a></li>
+            <li><a href="index.html">Translator</a></li>
+            <li><a href="index_contact.html">Contact</a></li>
+        </ul>
+    </div><!-- end of .navbar -->
+
+
+    <div id="translator-vn-ban" class="option-df">
+        <div class="grey-bar"></div>
+        <!-- Main content -->
+        <div id="main-content">
+            <div class="btn-holder">
+                <button class="btn-translation-type">
+                    <img id="text-icon" class="img-type">
+                    <span>Text</span>
+                </button>
+                <button class="btn-translation-type">
+                    <img id="file-icon" class="img-type">
+                    <span>File</span>
+                </button>
+            </div>
+            <div class="container">
+                <div class="translator">
+                    <ul class="controls">
+                        <li class="row vn">
+                            <span>Vietnamese</span>
+                        </li>
+                        <li class="row">
+                            <select>
+                                <option value="combined">Combined</option>
+                                <option value="loanformer">Loanformer</option>
+                                <option value="pho-bert-fused-nmt">PhoBERT-Fused NMT</option>
+                                <option value="transformer">Transformer</option>
+                                <option value="bartpho">BartPho</option>
+                            </select>
+                        </li>
+                        <li class="row bn">
+                            <span>Bahnaric</span>
+                        </li>                
+                    </ul>
+                    <div class="text-input">
+                        <textarea class="vn-text" placeholder="Enter text"></textarea>
+                        <textarea class="bn-text" placeholder="Translation" readonly disabled></textarea>
+                    </div>
+                </div>
+                <!-- End of .translator -->
+                <button id="btn-translate">Translate</button>
+            </div><!-- End of .container -->
+        </div><!-- End of #main-content -->
+    <!-- </div>
+    <footer style="overflow: hidden"><img src="images/wave.png" id="wave-edit"></footer> -->
     <script src="js/script.js"></script>
 </body>
 </html>
-
-

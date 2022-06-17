@@ -7,66 +7,72 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Vietnamese - Bahnaric Neural Machine Translator</title>
 </head>
-<style>
-    .myDiv {
-        border: 5px outset rgb(255, 8, 0);
-        background-color: lightblue;
-        text-align: center;
-    } 
-</style>
 <body>
+    
     <header>
-        <div class="header-box">
-            <nav>
+        <nav id="header-nav" class="header">
+            <a href="#">
+                <img id="header-logo" class="float-left" src="images/logo.png">
+            </a>
+            <div class="title">
                 <a href="index.html">
-                    <img id="logo-title" src="images/logo.png">
-                    <div id="title" class="header-title">
-                        <h1>
-                            Vietnamese - Bahnaric <br>
-                            Neural Machine Translator
-                        </h1>
-                    </div>
+                    <h1>Vietnamese - Bahnaric<br>
+                    <span>Neural Machine Translator</span></h1>
                 </a>
-            </nav>
-            <button id="button">
-                <p class="small-bar"></p>
-                <p class="small-bar"></p>
-                <p class="small-bar"></p>
-            </button>
-        </div>
-
-    </header>
-    <div id="gray-bar">
-    <!-- Tab links-->
-        <div class = 'tab' >
-            <button class = 'tablinks' onclick="openCity(event, 'Home')"> Home </button>
-            <button class = 'tablinks' onclick="openCity(event, 'Bahnaric')"">Bahnaric</button>
-            <button class = 'tablinks' onclick="openCity(event, 'Model')">Model</button>
-            <button class = 'tablinks' onclick="openCity(event, 'Data augmentation')">Data augmentation</button>
-            <button class = 'tablinks' onclick="openCity(event, 'Preprocessing')">Preprocessing</button>
-            <button class = 'tablinks' onclick="openCity(event, 'References')">References</button>
-        </div>
-    </div>
-    <div id = "Home" class = 'tabcontentHome'>
-        <div class = "content-area">
-            <h1 class = "section-header">Introduction</h1>
-            <p class = "pp">This is the first phase of our simple Web Project, completed by three members of University of Technology.</p>
-            <p class = "pp">Our three members are: </p>
-            <div class="row1">
-                <div class="column1">Nguyen Viet Hoa
-                    <img src = "images/Hoa Avatar.jpg" alt = "Nguyen Viet Hoa" class = "introImage-format">
-                </div>
-                <div class="column1"> Luu Quoc Vinh
-                    <img src = "images/Vinh Avatar.jpg" alt = "Luu Quoc Vinh" class = "introImage-format">
-                </div>
-                <div class="column1">Pham Chau Thanh
-                    <img src="images/Thanh Avatar.jpg" alt = "Pham Chau Thanh" class = "introImage-format">
-                </div>
             </div>
-            <p class = "pp">In this first phase, we are just using plain HTML and CSS to build our website (without any framework) </p>
+            
+            <button id="btn-navbar" class="header-button float-right">
+                <div class="icon-bar"></div>
+                <div class="icon-bar"></div>
+                <div class="icon-bar"></div>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <a href="#">
+            <img id="navbar-logo" src="images/logo.png">
+        </a>
+        <hr>
+        <ul class="navbar-list">
+            <li><a href="index_about.html">Home</a></li>
+            <li><a href="index.html">Translator</a></li>
+            <li><a href="index_contact.html">Contact</a></li>
+        </ul>
+    </div><!-- end of .navbar -->
+
+    <div id="home-about" class="show option-df">
+        <div class="grey-bar">
+            <div class = 'tab' >
+                <button class = 'tablinks' onclick="openCity(event, 'Home')"> Home </button>
+                <button class = 'tablinks' onclick="openCity(event, 'Bahnaric')">Bahnaric</button>
+                <button class = 'tablinks' onclick="openCity(event, 'Model')">Model</button>
+                <button class = 'tablinks' onclick="openCity(event, 'Data augmentation')">Data augmentation</button>
+                <button class = 'tablinks' onclick="openCity(event, 'Preprocessing')">Preprocessing</button>
+                <button class = 'tablinks' onclick="openCity(event, 'References')">References</button>
+            </div>
         </div>
-    </div>
-    <div id="Bahnaric" class='tabcontent'>
+        <div id = "Home" class = 'tabcontentHome'>
+            <div class = "content-area">
+                <!-- <h1 class = "section-header">Introduction</h1>
+                <p class = "pp">This is the first phase of our simple Web Project, completed by three members of University of Technology.</p>
+                <p class = "pp">Our three members are: </p>
+                <div class="row1">
+                    <div class="column1">Nguyen Viet Hoa
+                        <img src = "images/Hoa Avatar.jpg" alt = "Nguyen Viet Hoa" class = "introImage-format">
+                    </div>
+                    <div class="column1"> Luu Quoc Vinh
+                        <img src = "images/Vinh Avatar.jpg" alt = "Luu Quoc Vinh" class = "introImage-format">
+                    </div>
+                    <div class="column1">Pham Chau Thanh
+                        <img src="images/Thanh Avatar.jpg" alt = "Pham Chau Thanh" class = "introImage-format">
+                    </div>
+                </div>
+                <p class = "pp">In this first phase, we are just using plain HTML and CSS to build our website (without any framework) </p> -->
+            </div>
+        </div>
+        <div id="Bahnaric" class='tabcontent'>
             <div class = "content-area">
                 <h1 class = "section-header" >Dân số Bahnar</h1>
                 <p class="pp">Bahnar là một trong 54 dân tộc sống trong lãnh thổ Việt Nam. Theo số liệu thống kê từ Kết quả toàn bộ của Tổng điều tra
@@ -102,7 +108,7 @@
                 <img src = "images/HeThongChuVietBahnar.png" alt = "HeThongChuVietBahnar" class = "center" style="width:350px; height:512px">
                 <h1 class = "section-header">Những thách thức trong bài toán dịch máy Việt - Bahnar</h1>
                 <p class="pp">Với những đặc điểm nêu trên, bài toán dịch máy Việt - Bahnar bằng mạng nơ-ron tồn tại một số khó khăn sau:</p>
-                <ul>
+                <ul class="about_li">
                     <li>Nguồn tài liệu dạng văn bảng của tiếng Bahnar vô cùng khan hiếm do do văn hóa truyền miệng vẫn còn là phương thức truyền
                     tải văn hóa, thông tin, tri thức chính của cộng đồng này. Điều này gây khó khăn rất nhiều cho các mô hình dịch máy bằng
                     mạng nơ-ron bởi vì để huấn luyện được các mô hình thì cần một lượng dữ liệu rất lớn.</li>
@@ -234,7 +240,7 @@
             <p class="pp">Do người Bahnar sống tập trung chủ yếu ở khu vực Tây Nguyên (Gia Lai, Kontum) và Duyên hải miền trung (Bình Định, Phú
             Yên) [Vie20] nên dữ liệu cần thu thập chủ yếu có nguồn gốc tập trung trong phạm vi các tỉnh này. Các đối tượng cần thu
             thập gồm:</p>
-            <ul>
+            <ul class="about_li">
                 <li>Dữ liệu dạng pdf hoặc hình ảnh từ các tài liệu nghiên cứu, giảng dạy tiếng Bahnar; các tác phẩm văn học, sách, báo, tạp
                 chí song ngữ Việt - Bahnar,...</li>
                 <li>Dữ liệu dạng text từ nội dung các bản tin của đài phát thanh, chương trình truyền hình tại các địa phương.</li>
@@ -247,7 +253,7 @@
             .txt. Mặc dù hiện nay Pytesserect chưa hỗ trợ cho tiếng Bahnar nhưng do sự tương đồng trong bảng chữ cái giữa tiếng Việt
             và tiếng Bahnar nên định dạng tiếng Việt được lựa chọn để trích xuất cho cả văn bản tiếng Việt và tiếng Bahnar. Riêng
             phần tiếng Bahnar sau đó sẽ được áp dụng một số heuristic để cho kết quả chính xác:</p>
-            <ul>
+            <ul class="about_li">
                 <li>Thay thế các dấu "sắc", "huyền", "hỏi", "ngã" thành dấu "vành trăng khuyết" vì trong tiếng Bahnar chỉ có dấu vành trăng
                 khuyết được đặt trên các nguyên âm nên khả năng cao bộ OCR của Pyteserect cho tiếng Việt nhận diện nhầm thành một các
                 dấu trên. Ngoài ra dấu "nặng" cũng được loại bỏ vì tiếng Bahnar không có dấu này.</li>
@@ -259,7 +265,7 @@
                 loại
                 dữ liệu không có cấu trúc và thường chứa nhiều nhiễu (noise) gây khó khăn cho quá trình huấn luyện.</p>
             <img src="images/TienXuLyDuLieu.png" alt="TienXuLyDuLieu" class="center">
-            <ul>
+            <ul class="about_li">
                 <li>Làm sạch dữ liệu (cleaning): là bước loại bỏ nhiễu trong dữ liệu như các thẻ html, xml, đường link,...</li>
                 <li>Tách từ (tokenization hay word segmentation): là quá trình chuyển văn bản thành một chuỗi các token với mỗi token là một
                 chuỗi ký tự mang ý nghĩa cụ thể, biểu thị cho một đơn vị ngữ nghĩa. Một cách gần đúng, có thể xem token là một từ trong
@@ -279,7 +285,7 @@
         <div id = "References" class = 'tabcontent'>
             <div class="content-area">
             <h1 class = "section-header">Tham khảo</h1>
-            <ul>
+            <ul class="about_li">
                 <li>[Vie20] General Statistics Office of Vietnam. Completed Results of the 2019 Viet Nam Population and Housing Census.
                 2020.</li>
                 <li>[CH13] Nathaniel CHEESEMAN and Jennifer HERINGTON. “Bahnaric linguistic bibliography with selected”. in(2013).</li>
@@ -327,8 +333,8 @@
             </ul>
             </div>
         </div>
-
-    <footer style="overflow: hidden"><img src="images/wave.png" id="wave-edit"></footer>
+    </div>
+    <!-- <footer style="overflow: hidden"><img src="images/wave.png" id="wave-edit"></footer> -->
     <script src="js/script.js"></script>
 </body>
 </html>

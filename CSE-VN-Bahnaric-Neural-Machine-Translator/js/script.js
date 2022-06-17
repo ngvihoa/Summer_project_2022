@@ -13,3 +13,27 @@ function openCity(evt, tabname) {
     document.getElementById(tabname).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+document.querySelector('#btn-navbar').addEventListener('click', function(){
+    document.querySelector('.navbar').style.transform = "none";
+})
+
+// function openPart(partname) {
+//     switch(partname) {
+//         case 'home-about': {
+//             document.getElementById('home-about').classList.add('show');
+//             document.getElementById('translator-vn-ban').classList.remove('show')
+//             document.getElementById('contact-part').classList.remove('show');
+//         }
+//         case 'translator-vn-ban': {
+//             document.getElementById('home-about').classList.remove('show');
+//             document.getElementById('translator-vn-ban').classList.add('show')
+//             document.getElementById('contact-part').classList.remove('show');
+//         }
+//         case 'contact-part': {
+//             document.getElementById('home-about').classList.remove('show');
+//             document.getElementById('translator-vn-ban').classList.remove('show')
+//             document.getElementById('contact-part').classList.add('show');
+//         }
+//     }
+// }
