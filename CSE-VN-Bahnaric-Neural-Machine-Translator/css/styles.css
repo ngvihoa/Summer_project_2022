@@ -18,7 +18,7 @@ html{
 /*      HEADER      */
 .header{
     width:100%;
-    height: 100vh;
+    height: 760px;
     background-position: center;
     background-size: cover;
     position: relative;
@@ -150,11 +150,11 @@ nav .fa{
         padding: 30px;
     }
     .nav-links{
-        position: absolute;
+        position: fixed;
         background-color: #fff;
         border: 1px solid black;
         border-radius: 15px;
-        height: 98vh;
+        height: 100%;
         width: 200px;
         top: 5px;
         bottom: 5px;
@@ -169,6 +169,9 @@ nav .fa{
         margin: 10px;
         font-size: 22px;
         cursor: pointer;
+    }
+    .nav-links ul li:hover a{
+        text-shadow: none;
     }
 
     .meaning h1{
@@ -246,7 +249,7 @@ nav .fa{
 }
 .big-icon i{
     font-size: 6rem;
-    color: #1F2F98;
+    color: #1481b7;
 }
 .big-icon + div{
     margin-top: 30px;
@@ -334,7 +337,7 @@ nav .fa{
 /*      FOOTER      */
 footer{
     width: 100%;
-    height: 50vh;
+    height: 360px;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -432,7 +435,7 @@ footer{
 }
 @media (max-width: 1200px){
     footer{
-        height: 70vh;
+        height: 480px;
         justify-content: space-between;
     }
     .follow {
@@ -478,7 +481,7 @@ footer{
 }
 @media (max-width: 767px){
     footer{
-        height: 110vh;
+        height: 800px;
     }
     .link-content{
         margin-top: -30px;
@@ -551,7 +554,7 @@ footer{
 }
 .brid-1{
     width: 100%;
-    height: 40vh;
+    height: 300px;
     background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(143, 255, 218, 0.7));
 }
 .tab-bar{
@@ -560,7 +563,7 @@ footer{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: -52.8px;
+    margin-top: -55px;
 }
 .tab-bar button {
     background-color: inherit;
@@ -670,14 +673,14 @@ footer{
         width: 350px;
     }
     .tab-bar{
-        margin-top: -105.8px;
+        margin-top: -107.8px;
     }
 }
 
 /*          TRANSLATOR      */
 #trnslt{
     background-image: linear-gradient(to left top, rgb(74, 222, 222, 0.5), rgb(28, 167, 237));
-    height: 60vh;
+    height: 400px;
 }
 .text-box-translator{
     width: 100%;
@@ -712,15 +715,15 @@ footer{
     cursor: pointer;
 }
 #main-content{
-    margin-top: -20vh;
-    margin-bottom: 20vh;
+    margin-top: -130px;
+    margin-bottom: 130px;
 }
 .grey-bar{
     background-color: #1488db82;
-    height: 16vh;
+    height: 100px;
     width: 90%;
     margin: 50px auto;
-    padding: 4vh 0;
+    padding: 50px 0;
     border-radius: 15px;
 }
 .btn-holder{
@@ -897,8 +900,8 @@ footer{
 }
 #mailus{
     width: 80%;
-    height: 40vh;
-    margin-bottom: 20vh;
+    height: 300px;
+    margin-bottom: 150px;
     margin-inline: auto;
     border-radius: 30px;
     display: flex;
@@ -909,8 +912,8 @@ footer{
     position: relative;
 }
 #mailus:hover{
-    margin-top: -2vh;
-    margin-bottom: 22vh;
+    margin-top: -10px;
+    margin-bottom: 160px;
 }
 #mailus div:nth-child(1){
     margin-right: 20%;
@@ -1027,7 +1030,7 @@ footer{
 /*      CONTACT     */
 #cntct{
     background-image: linear-gradient(to left bottom, rgb(31, 47, 152, .7), rgba(74, 222, 222, 0.7));
-    height: 60vh;
+    height: 400px;
 }
 .text-box-contact{
     width: 100%;
