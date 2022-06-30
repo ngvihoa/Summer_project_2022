@@ -4,93 +4,98 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Vietnamese - Bahnaric Neural Machine Translator</title>
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <nav id="header-nav" class="header">
-            <a href="#">
-                <img id="header-logo" class="float-left" src="images/logo.png">
-            </a>
-            <div class="title">
-                <a href="index.html">
-                    <h1>Vietnamese - Bahnaric<br>
-                    <span>Neural Machine Translator</span></h1>
-                </a>
+    <section class="header" style="background-image: linear-gradient(rgba(74,222,222,0.5), rgba(31,47,152,0.5)), url(images/bg.jpg);
+    ">
+        <nav id="navbar">
+            <a href="index.html"><img src="images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hidetab()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index_about.html">About</a></li>
+                    <li><a href="index-translator.html">Translator</a></li>
+                    <li><a href="index_contact.html">Contact</a></li>
+                </ul>
             </div>
-            
-            <button id="btn-navbar" class="header-button float-right">
-                <div class="icon-bar"></div>
-                <div class="icon-bar"></div>
-                <div class="icon-bar"></div>
-            </button>
+            <i class="fa fa-bars" onclick="showtab()"></i>
         </nav>
-    </header>
+        <div class="text-box">
+            <h1>Welcome to URA Team</h1>
+            <p>Vietnamese to Bahnaric Neural Machine Translator System</p>
+            <a href="index_about.html" class="more-info-btn">More Info >></a>
+        </div>
 
+    </section>
 
+    <!--Properties-->
+    <section class="meaning">
+        <h1 class="gradient-text">Meaning Of This Project</h1>
+        <div class="part-col">
+            <div class="proper"><div class="big-icon"><i class="fa-solid fa-lightbulb"></i></div><div>Unique</div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero perferendis, quas dolores eveniet iure incidunt quisquam ad non cumque sint fugiat vel cum exercitationem assumenda accusamus debitis eligendi placeat quae.</p></div>
+            <div class="proper"><div class="big-icon"><i class="fa-solid fa-bullseye"></i></div><div>deepening cultural diversity</div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero perferendis, quas dolores eveniet iure incidunt quisquam ad non cumque sint fugiat vel cum exercitationem assumenda accusamus debitis eligendi placeat quae.</p></div>
+            <div class="proper"><div class="big-icon"><i class="fa-solid fa-microscope"></i></div><div>Research</div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero perferendis, quas dolores eveniet iure incidunt quisquam ad non cumque sint fugiat vel cum exercitationem assumenda accusamus debitis eligendi placeat quae.</p></div>
+        </div>
+    </section>
+    
+    <h1 class="gradient-text2 xpl">Explore More</h1>
+    <section class="container2">
+        <a href="index_about.html"><div style="background-image: url(images/about_page.png);" class="taglink1"><div class="rip"></div></div></a>
+        <a href="index-translator.html"><div style="background-image: url(images/translate_page.png);" class="taglink2"><div class="rip"></div></div></a>
+    </section>
+    <section class="container2">
+        <a href="index_contact.html"><div style="background-image: url(images/contact_page.png);" class="taglink3"><div class="rip"></div></div></a>
+    </section>
 
-
-    <!-- Navigation bar -->
-    <div class="navbar">
-        <a href="#">
-            <img id="navbar-logo" src="images/logo.png">
-        </a>
-        <hr>
-        <ul class="navbar-list">
-            <li><a href="index_about.html">Home</a></li>
-            <li><a href="index.html">Translator</a></li>
-            <li><a href="index_contact.html">Contact</a></li>
-        </ul>
-    </div><!-- end of .navbar -->
-
-
-    <div id="translator-vn-ban" class="option-df">
-        <div class="grey-bar"></div>
-        <!-- Main content -->
-        <div id="main-content">
-            <div class="btn-holder">
-                <button class="btn-translation-type">
-                    <img id="text-icon" class="img-type">
-                    <span>Text</span>
-                </button>
-                <button class="btn-translation-type">
-                    <img id="file-icon" class="img-type">
-                    <span>File</span>
-                </button>
+    <footer style="background-image: linear-gradient(to right, rgba(28, 167, 236, 0.7), rgba(31,47,152, 0.3)), url(images/magicc.jpg);">
+        <div class="overview">
+            <div class="team">
+                <a href="index.html"><span>URA <img src="images/logo.png"> Team</span></a>
             </div>
-            <div class="container">
-                <div class="translator">
-                    <ul class="controls">
-                        <li class="row vn">
-                            <span>Vietnamese</span>
-                        </li>
-                        <li class="row">
-                            <select>
-                                <option value="combined">Combined</option>
-                                <option value="loanformer">Loanformer</option>
-                                <option value="pho-bert-fused-nmt">PhoBERT-Fused NMT</option>
-                                <option value="transformer">Transformer</option>
-                                <option value="bartpho">BartPho</option>
-                            </select>
-                        </li>
-                        <li class="row bn">
-                            <span>Bahnaric</span>
-                        </li>                
+            <div class="link-content">
+                <div class="links ft-box">
+                    <h3>Menu Access</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index_about.html">About</a></li>
+                        <li><a href="index-translator.html">Translator</a></li>
+                        <li><a href="index_contact.html">Contact</a></li>
                     </ul>
-                    <div class="text-input">
-                        <textarea class="vn-text" placeholder="Enter text"></textarea>
-                        <textarea class="bn-text" placeholder="Translation" readonly disabled></textarea>
-                    </div>
                 </div>
-                <!-- End of .translator -->
-                <button id="btn-translate">Translate</button>
-            </div><!-- End of .container -->
-        </div><!-- End of #main-content -->
-    <!-- </div>
-    <footer style="overflow: hidden"><img src="images/wave.png" id="wave-edit"></footer> -->
+                <div class="recommend ft-box">
+                    <h3>Recommend</h3>
+                    <ul>
+                        <li><a href="">Website project</a></li>
+                        <li><a href="">Website project</a></li>
+                        <li><a href="">Website project</a></li>
+                        <li><a href="">Website project</a></li>
+                    </ul>
+                </div>
+                <div class="follow ft-box">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <a class="btn-facebook" href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                        <a class="btn-twitter" href="#"><i class="fa-brands fa-twitter fa-2x"></i></a>
+                        <a class="btn-dribbble" href="#"><i class="fa-brands fa-dribbble fa-2x"></i></a>    
+                        <a class="btn-linkedin" href="#"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                        <a class="btn-github" href="#"><i class="fa-brands fa-github fa-2x"></i></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="team">
+            <span>URA <img src="images/logo.png"> Team</span>
+        </div> -->
+        <div class="copyright">
+            Copyright &copy; 2022 URA Research Group <br> VNU HCM - University of Technology
+        </div>
+    </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>
